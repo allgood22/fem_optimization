@@ -2,7 +2,27 @@
 
 This project is a MATLAB-based Finite Element Method (FEM) solver designed to analyze and optimize 2D truss structures. 
 
-##  Application Modules
+## 📁 Directory Structure
+* `project_final.mlapp`: Main MATLAB App Designer file.
+* `materials.txt`: Database for material property definitions.
+* `truss_structures/`: Folder containing example configurations (`bridge.txt`, `warren_truss.txt`, `arch.txt`, `high_density.txt`).
+
+## 🛠 Operational Constraints
+1. **Node Geometry:** The distance between any two connected nodes must be **$\le 3\text{m}$**.
+2. **Support Fixation:** The bottom-left and bottom-right corners must be fixed in both the **X and Y axes**.
+3. **BC Consistency:** A single node cannot have two identical Boundary Conditions assigned to it.
+4. **Modal Limits:** The requested mode number for analysis must be less than or equal to the total degrees of freedom available.
+
+## ⚙️ How to Run
+1. Clone or download this repository.
+2. Open MATLAB and navigate to the project folder (app).
+3. Run `project_final.mlapp` to launch the GUI.
+4. On **Page 1**, load a configuration and set BCs to begin analysis.
+
+
+
+
+
 
 ### Page 1: Setup & Configuration
 * **Importing Geometry:** Truss structures can be imported manually or by using the **"Read Node and Elements"** button to load `.txt` files from the `truss_structures/` directory.
@@ -31,20 +51,4 @@ $$f_{obj} = \min(W \times \text{disp})$$
 
 
 
-## 📁 Directory Structure
-* `project_final.mlapp`: Main MATLAB App Designer file.
-* `materials.txt`: Database for material property definitions.
-* `truss_structures/`: Folder containing example configurations (`bridge.txt`, `warren_truss.txt`, `arch.txt`, `high_density.txt`).
-
-## 🛠 Operational Constraints
-1. **Node Geometry:** The distance between any two connected nodes must be **$\le 3\text{m}$**.
-2. **Support Fixation:** The bottom-left and bottom-right corners must be fixed in both the **X and Y axes**.
-3. **BC Consistency:** A single node cannot have two identical Boundary Conditions assigned to it.
-4. **Modal Limits:** The requested mode number for analysis must be less than or equal to the total degrees of freedom available.
-
-## ⚙️ How to Run
-1. Clone or download this repository.
-2. Open MATLAB and navigate to the project folder (app).
-3. Run `project_final.mlapp` to launch the GUI.
-4. On **Page 1**, load a configuration and set BCs to begin analysis.
 
