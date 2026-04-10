@@ -27,6 +27,10 @@ $$f_{obj} = \min(W \times \text{disp})$$
 * **Live Monitoring:** Real-time feedback on Weight, Max Displacement, Max Stress, and the current Objective Function value.
 * **Manual Override:** The process can be terminated at any point using the **Stop** button.
 
+
+
+
+
 ## 📁 Directory Structure
 * `project_final.mlapp`: Main MATLAB App Designer file.
 * `materials.txt`: Database for material property definitions.
